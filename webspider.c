@@ -7,7 +7,7 @@
 #define MAXQSIZE 9000000       // Maximum size of the queue, q
 #define MAXURL 100000          // Maximum size of a URL
 #define MAXPAGESIZE 20000          // Maximum size of a webpage
-#define MAXDOWNLOADS 2000      // Maximum number of downloads we will attempt
+#define MAXDOWNLOADS 200000      // Maximum number of downloads we will attempt
 #define MAXWORDLEN 100          // Maximum length of a word to store      
 
 //
@@ -16,7 +16,7 @@
 //
 //  Compile: make
 //
-//  Run: webspider http://www.leidenuniv.nl
+//  Run: webspider http://www.apple.com
 
 
 char *ShiftP(char *p, char *q)
@@ -203,16 +203,13 @@ int GetNextURL(char *p, char *q, char *myurl)
 
 int main(int argc, char* argv[]) 
 // 
-//  This code was written with speed and to some extent clarity in mind.  As you
-//  are supposed to be able to convert your own functions from the previous assignment
-//  to a WWW robot in under 2 hours, we also did a fast implementation to double-check
-//  the time required. 
+//  
 //
 //  This basic WWW robot is using the two functions specified in class.
 //  html = GetWebPage(url);
 //  weblinks = GetLinksFromWebPage(html, url);
 //
-//  It does attempt to limit the downloads to Leiden University domains
+//  It does attempt to limit the downloads to specified domains
 //  It does limit the total number of downloads
 //  It does not check for the Robot Exclusion Protocol: robots.txt because
 //  we are only looking at domains which belong to us.  
@@ -259,10 +256,7 @@ int main(int argc, char* argv[])
 //  As we go through the queue, we need to grab the next URL and shift the position of p
 //  The method using the two functions GetNextURL and ShiftP was written for clarity.  
 //  
-      //
-      //  *****ADD YOUR CODE HERE*****
-      // Add code here to get the next URL and shift the position of q within q.
-      //
+
       
             
         GetNextURL(p, q, url);
@@ -271,7 +265,7 @@ int main(int argc, char* argv[])
 
         
 //
-//  This is a simple test to see if the url is within one of the allowed domains
+//  This used to be a simple test to see if the url is within one of the testing domains
 //  liacs.nl, leidenuniv.nl, leiden.edu, or mastersinleiden.nl.  It is
 //  not perfect but will probably work for most of the cases and was trivial to write.
 //
