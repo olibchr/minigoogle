@@ -26,3 +26,5 @@ To build up a bag of words, run
 
 or any other URL to start from. The webcrawler parses the webpages, puts links in the pocket and continues on found links. (Don't forget to turn it off and be careful to not query one head to much or they will think that theyre under attack. No resposibility taken.)
 
+EDIT: I recommend to do a .make again after pulling this branch. And I just put a few keywords in the bag, so you might want to crawl a few minutes first.
+
