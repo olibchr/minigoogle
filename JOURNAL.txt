@@ -1,8 +1,6 @@
-Making a Simple Search Engine
+Simple Search Engine
 
-This is a simple example of using PHP to call an external program and 
-then display the results which may be useful for doing some of the 
-homework. 
+Use PHP to call an external program and then display the results.
 
 The mongoose program is a lightweight and no-installation-required 
 webserver which serves the files in the current directory it is in.
@@ -18,10 +16,6 @@ From a browser you can type:
 
 http://localhost:8080/
 
-We have given you a file, index.php which has php invoke an external 
-program called myprog and echo the output of myprog (myprog.c is 
-also included) to the browser.  It shows how to pass arguments to myprog
-and display the output as if we were creating a search engine
 
 
 
